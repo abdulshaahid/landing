@@ -71,8 +71,8 @@ export function Features() {
               <div className="mb-2 sm:mb-2 p-4 sm:p-4 rounded-full bg-[#000000] backdrop-blur-sm ">
                 {feature.icon}
               </div>
-              <h3 className="text-base sm:text-lg md:text-xl text-[#fdfff5] font-semibold mb-2 sm:mb-3">{feature.title}</h3>
-              <p className="text-sm sm:text-base text-[#ffffff]/60  ">{feature.description}</p>
+              <h3 className="text-xl sm:text-lg md:text-xl text-[#fdfff5] font-semibold mb-2 sm:mb-3">{feature.title}</h3>
+              <p className="text-m sm:text-base text-[#ffffff]/60  ">{feature.description}</p>
             </motion.div>
           ))}
         </div>
