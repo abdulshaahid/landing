@@ -12,7 +12,7 @@ export function Partners() {
             <h2 className="text-2xl text-black md:text-4xl font-bold mb-3 md:mb-6 gradient-text">
               Own a Travel Business?<br />Let's Grow Together
             </h2>
-            <p className="text-sm md:text-xl text-black/70 mb-4 md:mb-8 text-muted-foreground">
+            <p className="text-sm md:text-xl text-[#171717] mb-4 md:mb-8 text-muted-foreground">
               Join Trawayl's network of verified tour providers and connect with travelers
               seeking authentic adventures. Zero marketing hassle, more bookings.
             </p>

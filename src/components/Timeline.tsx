@@ -45,7 +45,7 @@ export function Timeline() {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl text-[#fffff0] sm:text-4xl md:text-4xl font-bold mb-3 sm:mb-4">How Trawayl Works</h2>
-          <p className="text-sm sm:text-base text-[#fffff0]/60 text-muted-foreground max-w-2xl mx-auto px-4">
+          <p className="text-sm sm:text-base text-[#999999]  text-muted-foreground max-w-2xl mx-auto px-4">
             Your journey to extraordinary adventures in five simple steps
           </p>
         </motion.div>
@@ -128,7 +128,7 @@ export function Timeline() {
                     }}
                   >
                     <h3 className="text-lg sm:text-xl text-[#fffff0] font-bold mb-2">{step.title}</h3>
-                    <p className="text-sm sm:text-base text-[#fffff0]/60 leading-relaxed">{step.description}</p>
+                    <p className="text-sm sm:text-base text-[#999999]  leading-relaxed">{step.description}</p>
                   </motion.div>
                 </motion.div>
 
@@ -144,7 +144,7 @@ export function Timeline() {
                   </div>
                   <div className="w-4 h-4 rounded-full bg-[#37E5A5] mb-4 shadow-lg shadow-[#37E5A5]/20" />
                   <h3 className="text-lg md:text-xl text-[#fffff0] font-bold mb-2">{step.title}</h3>
-                  <p className="text-sm text-[#fffff0]/60 text-muted-foreground">{step.description}</p>
+                  <p className="text-sm text-[#999999]  text-muted-foreground">{step.description}</p>
                 </motion.div>
               </motion.div>
             ))}

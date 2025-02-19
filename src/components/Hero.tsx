@@ -42,7 +42,7 @@ export function Hero() {
           </motion.div>
 
           <motion.p
-            className="text-base md:text-l text-muted-foreground text-[#fffff0]/60 mb-8 md:mb-12"
+            className="text-base md:text-l text-muted-foreground text-[#999999] mb-8 md:mb-12"
             variants={fadeIn}
           >
             "Trawayl connects adventure seekers with expert tour providers,
