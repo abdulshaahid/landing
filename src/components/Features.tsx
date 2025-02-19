@@ -68,7 +68,7 @@ export function Features() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <div className="mb-4 sm:mb-6 p-4 sm:p-4 rounded-full bg-[#000000] backdrop-blur-sm ">
+              <div className="mb-2 sm:mb-2 p-4 sm:p-4 rounded-full bg-[#000000] backdrop-blur-sm ">
                 {feature.icon}
               </div>
               <h3 className="text-base sm:text-lg md:text-xl text-[#fffff0] font-semibold mb-2 sm:mb-3">{feature.title}</h3>
