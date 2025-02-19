@@ -1,35 +1,19 @@
 import { motion } from 'framer-motion';
-import { Compass, Twitter, Github, Instagram } from 'lucide-react';
+import { Linkedin, Twitter, Github, Instagram } from 'lucide-react';
 import { fadeIn, stagger } from '../utils/animations';
 
 export function Footer() {
-  const sections = [
-    {
-      title: "Product",
-      links: ["Features", "How it Works", "Pricing", "FAQ"]
-    },
-    {
-      title: "Company",
-      links: ["About", "Blog", "Careers", "Press"]
-    },
-    {
-      title: "Resources",
-      links: ["Community", "Partners", "Guides", "Support"]
-    },
-    {
-      title: "Legal",
-      links: ["Privacy", "Terms", "Security", "Cookies"]
-    }
-  ];
+
 
   const socialLinks = [
-    { icon: <Twitter className="w-4 h-4 md:w-5 md:h-5" />, href: "#" },
+    { icon: <Twitter className="w-4 h-4 md:w-5 md:h-5" />, href: "https://x.com/trawayl" },
+    { icon: <Instagram className="w-4 h-4 md:w-5 md:h-5" />, href: "https://instagram.com/trawayl" },
+    { icon: <Linkedin className="w-4 h-4 md:w-5 md:h-5" />, href: "https://linkedin.com/company/trawayl" },
     { icon: <Github className="w-4 h-4 md:w-5 md:h-5" />, href: "#" },
-    { icon: <Instagram className="w-4 h-4 md:w-5 md:h-5" />, href: "#" }
   ];
 
   return (
-    <footer className="py-8 md:py-12 px-4 border-t border-[#fffff0]/10">
+    <footer className="py-8 md:py-12 px-4 ">
       <div className="container">
      
         <motion.div 
@@ -71,7 +55,7 @@ export function Footer() {
           </motion.div>
 
           <motion.p 
-            className="text-xs md:text-sm  text-center"
+            className="text-xs text-[#ffffff]/60 md:text-sm  text-center"
             variants={fadeIn}
           >
             © {new Date().getFullYear()} Trawayl. All rights reserved.<br />
