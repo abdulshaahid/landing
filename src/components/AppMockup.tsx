@@ -66,7 +66,7 @@ export function AppMockup() {
             transition={{ duration: 0.3 }}
           >
             <img 
-              src='src/assets/iphone.png' // Change this path based on your setup
+              src='https://i.ibb.co/nN39kH0C/iphone.png' // Change this path based on your setup
               alt="Trawayl App Mockup" 
               className="w-[280px] md:w-[320px] rounded-[40px] shadow-2xl"
             />
