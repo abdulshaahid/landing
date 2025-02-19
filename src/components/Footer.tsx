@@ -44,7 +44,7 @@ export function Footer() {
               <motion.a
                 key={index}
                 href={social.href}
-                className="hover:text-[#37E5A5] transition-colors duration-300"
+                className="text-[#fdfff5]/90 hover:text-[#37E5A5] transition-colors duration-300"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
               >
