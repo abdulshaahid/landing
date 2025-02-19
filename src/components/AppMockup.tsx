@@ -7,7 +7,7 @@ import { faHandPeace , faMap , faCertificate } from '@fortawesome/free-solid-svg
 
 export function AppMockup() {
   return (
-    <section className="section py-12 md:py-20 bg-black ">
+    <section className="section py-12 mb-8 md:py-20 bg-black ">
       <motion.div 
         className="container"
         initial="initial"

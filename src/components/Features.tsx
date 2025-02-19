@@ -38,7 +38,7 @@ export function Features() {
   ];
 
   return (
-    <section className="section py-8 sm:py-12 md:py-20" id="features">
+    <section className="section py-8 mb-8 sm:py-12 md:py-20" id="features">
 
       <motion.div 
         className="container"

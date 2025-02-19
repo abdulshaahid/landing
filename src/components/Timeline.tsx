@@ -32,7 +32,7 @@ export function Timeline() {
   ];
 
   return (
-    <section className="section py-8 sm:py-12 md:py-20 bg-black/50">
+    <section className="section py-8 mb-8 sm:py-12 md:py-20 bg-black/50">
       <motion.div
         className="container"
         initial={{ opacity: 0 }}
