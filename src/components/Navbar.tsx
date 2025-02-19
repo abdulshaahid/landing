@@ -58,13 +58,13 @@ export function Navbar() {
           exit={{ opacity: 0, y: -10 }}
           className="md:hidden absolute top-14 left-0 w-full bg-black/90 backdrop-blur-lg p-4 flex flex-col items-center gap-4"
         >
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-white text-lg">
+          <a href="https://instagram.com/trawayl" target="_blank" rel="noopener noreferrer" className="text-white text-lg">
             <Instagram className="w-6 h-6 inline-block mr-2" /> Instagram
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-white text-lg">
+          <a href="https://x.com/trawayl" target="_blank" rel="noopener noreferrer" className="text-white text-lg">
             <Twitter className="w-6 h-6 inline-block mr-2" /> X (Twitter)
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-white text-lg">
+          <a href="https://linkedin.com/company/trawayl" target="_blank" rel="noopener noreferrer" className="text-white text-lg">
             <Linkedin className="w-6 h-6 inline-block mr-2" /> Linkedin
           </a>
         </motion.div>

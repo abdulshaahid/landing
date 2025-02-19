@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Star, ChevronDown } from "lucide-react";
+
+import { Star } from "lucide-react";
 import { fadeIn, stagger } from "../utils/animations";
 import { EmailForm } from "./EmailForm";
 import { HeroFeatures } from "./HeroFeatures";
@@ -7,6 +8,7 @@ import { SparklesText } from "@/components/ui/sparkles-text";
 import { BackgroundLines } from "@/components/ui/background-lines";
 
 export function Hero() {
+
   return (
     <section className="section pt-0 md:pt-0">
       <BackgroundLines className=" flex items-center justify-center w-full flex-col px-4">
@@ -50,9 +52,11 @@ export function Hero() {
 
             <EmailForm />
             <HeroFeatures />
+           
           </div>
         </motion.div>
       </BackgroundLines>
+       
     </section>
   );
 }

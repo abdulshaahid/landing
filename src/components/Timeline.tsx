@@ -108,7 +108,7 @@ export function Timeline() {
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <div className="p-2 sm:p-5 rounded-2xl bg-[#191919]  backdrop-blur-sm
+                      <div className="p-2 sm:p-5 rounded-2xl bg-[#151515]  backdrop-blur-sm
                                     shadow-lg shadow-[#37E5A5]/5 hover:shadow-[#37E5A5]/20 transition-all duration-300">
                         {step.icon}
                       </div>
@@ -128,7 +128,7 @@ export function Timeline() {
                     }}
                   >
                     <h3 className="text-lg sm:text-xl text-[#fffff0] font-bold mb-2">{step.title}</h3>
-                    <p className="text-sm sm:text-base text-[#999999]  leading-relaxed">{step.description}</p>
+                    <p className="text-sm sm:text-base text-[#ffffff]/60  leading-relaxed">{step.description}</p>
                   </motion.div>
                 </motion.div>
 
@@ -138,7 +138,7 @@ export function Timeline() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="p-4 rounded-full bg-[#191919]  mb-4 backdrop-blur-sm
+                  <div className="p-4 rounded-full bg-[#151515]  mb-4 backdrop-blur-sm
                                 shadow-lg shadow-[#37E5A5]/5 hover:shadow-[#37E5A5]/10 transition-all duration-300">
                     {step.icon}
                   </div>

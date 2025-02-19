@@ -5,7 +5,7 @@ import { fadeIn, stagger } from '../utils/animations';
 
 export function AppMockup() {
   return (
-    <section className="section py-12 md:py-20 bg-black border-y border-[#37E5A5]/10">
+    <section className="section py-12 md:py-20 bg-black ">
       <motion.div 
         className="container"
         initial="initial"

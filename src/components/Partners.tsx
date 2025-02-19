@@ -13,7 +13,7 @@ export function Partners() {
               Own a Travel Business?<br />Let's Grow Together
             </h2>
             <p className="text-sm md:text-xl text-[#000000]/70 mb-4 md:mb-8 ">
-              Join Trawayl's network of verified tour providers and connect with travelers
+              Join Trawayl's network of verified tours and travel providers and connect with travelers
               seeking authentic adventures. Zero marketing hassle, more bookings.
             </p>
             <button 
@@ -33,7 +33,7 @@ export function Partners() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 md:gap-4 bg-black/90 p-3 md:p-4 rounded-full hover:bg-black/90 transition-colors"
+                  className="flex items-center gap-3 md:gap-4 bg-black/80 p-3 md:p-4 rounded-full hover:bg-black/90 transition-colors"
                 >
                   {item.icon}
                   <span className="text-sm md:text-lg text-white/80">{item.text}</span>
