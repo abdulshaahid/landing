@@ -44,7 +44,7 @@ export function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
           ) : (
             <>
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-[600] bg-[#fdfff5]/70 bg-clip-text text-transparent">
+                <h2 className="text-l font-[600] bg-[#fdfff5]/70 bg-clip-text text-transparent">
                   Early Partner Registration
                 </h2>
                 <button
@@ -57,9 +57,9 @@ export function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
 
               <div className="flex mb-6 bg-[#131313] rounded-full p-1">
                 <button
-                  className={`flex-1 py-2 text-center font-[500] rounded-full transition-colors ${
+                  className={`flex-1 py-2 text-center font-[500] text-sm rounded-full transition-colors ${
                     activeTab === 'package'
-                      ? 'bg-[#37e5a5]/90 text-black'
+                      ? 'bg-[#37e5a5]/90 text-black/90'
                       : 'text-gray-400 hover:text-gray-200'
                   }`}
                   onClick={() => setActiveTab('package')}
@@ -67,9 +67,9 @@ export function PartnerModal({ isOpen, onClose }: PartnerModalProps) {
                   Tourist Package
                 </button>
                 <button
-                  className={`flex-1 py-2 text-center font-[500] rounded-full transition-colors ${
+                  className={`flex-1 py-2 text-center font-[500] rounded-full text-sm transition-colors ${
                     activeTab === 'vehicle'
-                      ? 'bg-[#37e5a5]/90 text-black'
+                      ? 'bg-[#37e5a5]/90 text-black/90'
                       : 'text-gray-400 hover:text-gray-200'
                   }`}
                   onClick={() => setActiveTab('vehicle')}
