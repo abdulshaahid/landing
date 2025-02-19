@@ -11,7 +11,7 @@ export function HeroFeatures() {
 
   return (
     <motion.div 
-      className="flex flex-wrap justify-center gap-4 md:gap-8 text-xs md:text-sm text-muted-foreground px-4"
+      className="flex flex-wrap justify-center gap-4 md:gap-8 text-xs md:text-sm  px-4"
       variants={fadeIn}
     >
       {features.map((item, index) => (

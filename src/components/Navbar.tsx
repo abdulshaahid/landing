@@ -27,13 +27,13 @@ export function Navbar() {
             className="hidden md:flex items-center gap-6"
           >
             <a href="https://instagram.com/trawayl" target="_blank" rel="noopener noreferrer">
-              <Instagram className="w-6 h-6 text-muted-foreground hover:text-[#37E5A5] transition-colors" />
+              <Instagram className="w-6 h-6  hover:text-[#37E5A5] transition-colors" />
             </a>
             <a href="https://x.com/trawayl" target="_blank" rel="noopener noreferrer">
-              <Twitter className="w-6 h-6 text-muted-foreground hover:text-[#37E5A5] transition-colors" />
+              <Twitter className="w-6 h-6  hover:text-[#37E5A5] transition-colors" />
             </a>
             <a href="https://linkedin.com/company/trawayl" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="w-6 h-6 text-muted-foreground hover:text-[#37E5A5] transition-colors" />
+              <Linkedin className="w-6 h-6  hover:text-[#37E5A5] transition-colors" />
             </a>
           </motion.div>
 

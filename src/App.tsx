@@ -6,7 +6,6 @@ import { AppMockup } from './components/AppMockup';
 import { Partners } from './components/Partners';
 import { Footer } from './components/Footer';
 import MarqueeEffect from "@/components/ui/marquee-effect";
-import { ChevronDown } from 'lucide-react';
 
 
 

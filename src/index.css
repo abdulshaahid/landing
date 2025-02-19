@@ -32,7 +32,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-black text-white;
+    @apply bg-black text-foreground; /* Removed text-white */
   }
 }
 
@@ -62,7 +62,12 @@
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#37E5A5] to-[#37E5A5]/70;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#37E5A5] to-[#1cbf84]; /* Fixed gradient */
+  }
+
+  /* Custom inline text color utility */
+  .text-inline {
+    color: var(--foreground) !important; /* Allows inline styles to take effect */
   }
 }
 
@@ -75,10 +80,11 @@
   animation: spin-slow 20s linear infinite;
 }
 
+/* Fixed Trawayl Logo Gradient */
 .trawayl-logo {
   background: linear-gradient(135deg, 
     #37E5A5 0%, 
-    #37E5A5/70 100%
+    #1cbf84 100%
   );
   -webkit-background-clip: text;
   background-clip: text;

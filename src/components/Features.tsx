@@ -53,7 +53,7 @@ export function Features() {
         >
           
           <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-[#fffff0] mb-3 sm:mb-4">Experience Travel Like Never Before</h2>
-          <p className="text-sm sm:text-base text-[#999999] text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-[#ffffff]/60   max-w-2xl mx-auto">
             Discover a new way to explore the world with our innovative features designed
             for modern travelers.
           </p>
@@ -73,7 +73,7 @@ export function Features() {
                 {feature.icon}
               </div>
               <h3 className="text-base sm:text-lg md:text-xl text-[#fffff0] font-semibold mb-2 sm:mb-3">{feature.title}</h3>
-              <p className="text-sm sm:text-base text-[#999999]  text-muted-foreground">{feature.description}</p>
+              <p className="text-sm sm:text-base text-[#ffffff]/60  ">{feature.description}</p>
             </motion.div>
           ))}
         </div>

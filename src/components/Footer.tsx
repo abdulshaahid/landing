@@ -61,7 +61,7 @@ export function Footer() {
               <motion.a
                 key={index}
                 href={social.href}
-                className="text-muted-foreground hover:text-[#37E5A5] transition-colors duration-300"
+                className=" hover:text-[#37E5A5] transition-colors duration-300"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -71,7 +71,7 @@ export function Footer() {
           </motion.div>
 
           <motion.p 
-            className="text-xs md:text-sm text-muted-foreground text-center"
+            className="text-xs md:text-sm  text-center"
             variants={fadeIn}
           >
             © {new Date().getFullYear()} Trawayl. All rights reserved.<br />
