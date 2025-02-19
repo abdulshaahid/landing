@@ -1,4 +1,6 @@
 import { MountainSnow, Bus, Tent, ChevronRight } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMountainSun , faBus, faTents } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 import { PartnerModal } from './PartnerModal';
 export function Partners() {
@@ -27,9 +29,9 @@ export function Partners() {
           <div className="w-full md:w-1/2 mt-6 md:mt-0">
             <div className="grid grid-cols-1 gap-4 max-w-[280px] md:max-w-[320px] mx-auto">
               {[
-                { icon: <MountainSnow className="w-5 h-5 md:w-8 md:h-8 text-[#FF6B6B]" />, text: "Tour Package Providers" },
-                { icon: <Bus className="w-5 h-5 md:w-8 md:h-8 text-[#4ECDC4]" />, text: "Tourist Vehicle Providers" },
-                { icon: <Tent className="w-5 h-5 md:w-8 md:h-8 text-[#FFD93D]" />, text: "Strangers Camp Providers" },
+                { icon: <FontAwesomeIcon icon={faMountainSun} className="w-5 h-5 md:w-8 md:h-8 text-[#FF6B6B]" />, text: "Tour Package Providers" },
+                { icon: <FontAwesomeIcon icon={faBus} className="w-5 h-5 md:w-8 md:h-8 text-[#4ECDC4]" />, text: "Tourist Vehicle Providers" },
+                { icon: <FontAwesomeIcon icon={faTents} className="w-5 h-5 md:w-8 md:h-8 text-[#FFD93D]" />, text: "Strangers Camp Providers" },
               ].map((item, index) => (
                 <div
                   key={index}

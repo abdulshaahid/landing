@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
-import { Globe, Map, Star, Compass } from 'lucide-react';
 import { fadeIn, stagger } from '../utils/animations';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandPeace , faMap , faCertificate } from '@fortawesome/free-solid-svg-icons'
+
 
 
 export function AppMockup() {
@@ -25,17 +27,17 @@ export function AppMockup() {
             </h2>
             {[
               {
-                icon: <Globe className="w-8 h-8 md:w-12 md:h-12 text-[#4ECDC4]" />,
+                icon: <FontAwesomeIcon icon={faHandPeace} className="w-8 h-8 md:w-12 md:h-12 text-[#4ECDC4]" />,
                 title: "Easy to Use",
                 description: "Book trips without hassle, hidden fees, or endless confirmations."
               },
               {
-                icon: <Map className="w-8 h-8 md:w-12 md:h-12 text-[#FFD93D]" />,
+                icon: <FontAwesomeIcon icon={faMap} className="w-8 h-8 md:w-12 md:h-12 text-[#FFD93D]" />,
                 title: "Discover Adventures",
                 description: "Find and join exciting trips with just a few taps."
               },
               {
-                icon: <Star className="w-8 h-8 md:w-12 md:h-12 text-[#FF8F8F]" />,
+                icon: <FontAwesomeIcon icon={faCertificate} className="w-8 h-8 md:w-12 md:h-12 text-[#FF8F8F]" />,
                 title: "Travel Like Never Before",
                 description: "Experience authentic local adventures and create memories."
               }

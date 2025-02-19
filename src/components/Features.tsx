@@ -1,37 +1,37 @@
 import { motion } from 'framer-motion';
-import { MountainSnow, Bus, Users, Tent, Camera, Palmtree } from 'lucide-react';
 import { fadeIn, stagger } from '../utils/animations';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMountainSun , faBus, faPeopleGroup, faTents, faPanorama, faPersonHiking } from '@fortawesome/free-solid-svg-icons'
 
 export function Features() {
   const features = [
     {
-      icon: <MountainSnow className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#FF6B6B]" />,
+      icon: <FontAwesomeIcon icon={faMountainSun} className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#FF6B6B]" />,
       title: "Curated Travel Packages",
       description: "Handpicked experiences from verified tour package providers"
     },
     {
-      icon: <Bus className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#4ECDC4]" />,
+      icon: <FontAwesomeIcon icon={faBus} className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#4ECDC4]" />,
       title: "Seamless Transportation",
       description: "Book Tourist vehicles instantly with trusted tourist vehicle providers"
     },
     {
-      icon: <Users className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#FFD93D]" />,
+      icon: <FontAwesomeIcon icon={faPeopleGroup} className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#FFD93D]" />,
       title: "Group Adventures",
       description: "Join like-minded travelers on exciting journeys"
     },
     {
-      icon: <Tent className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#95A5FF]" />,
+      icon: <FontAwesomeIcon icon={faTents} className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#95A5FF]" />,
       title: "Camp Experiences",
       description: "Connect with verified strangers camp providers"
     },
     {
-      icon: <Camera className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#FF8F8F]" />,
+      icon: <FontAwesomeIcon icon={faPanorama} className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#FF8F8F]" />,
       title: "Photo-worthy Moments",
       description: "Discover Instagram-worthy destinations"
     },
     {
-      icon: <Palmtree className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#98FB98]" />,
+      icon: <FontAwesomeIcon icon={faPersonHiking} className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 text-[#98FB98]" />,
       title: "Unique Experiences",
       description: "Access exclusive local activities and events"
     }
@@ -68,7 +68,7 @@ export function Features() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              <div className="mb-4 sm:mb-6 p-4 sm:p-4 rounded-full bg-[#151515] backdrop-blur-sm ">
+              <div className="mb-4 sm:mb-6 p-4 sm:p-4 rounded-full bg-[#000000] backdrop-blur-sm ">
                 {feature.icon}
               </div>
               <h3 className="text-base sm:text-lg md:text-xl text-[#fffff0] font-semibold mb-2 sm:mb-3">{feature.title}</h3>

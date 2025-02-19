@@ -1,30 +1,31 @@
 import { motion } from 'framer-motion';
-import { Search, CreditCard, Users, Map, Gift } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass , faCreditCard , faUsers , faEarthAsia , faGift } from '@fortawesome/free-solid-svg-icons'
 
 export function Timeline() {
   const steps = [
     {
-      icon: <Search className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#37E5A5]" />,
+      icon: <FontAwesomeIcon icon={faMagnifyingGlass} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#37E5A5]" />,
       title: "Explore & Choose",
       description: "Browse curated trip packages, tourist vehicle rentals, or group camping trips from verified local providers."
     },
     {
-      icon: <CreditCard className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#4ECDC4]" />,
+      icon: <FontAwesomeIcon icon={faCreditCard} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#4ECDC4]" />,
       title: "Book Instantly",
       description: "Select your preferred package or rental and book directly through Trawayl—no middlemen, no hidden fees."
     },
     {
-      icon: <Users className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#FFD93D]" />,
+      icon: <FontAwesomeIcon icon={faUsers} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#FFD93D]" />,
       title: "Connect with Providers",
       description: "After booking, get instant confirmation and connect with the local provider for trip details."
     },
     {
-      icon: <Map className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#FF8F8F]" />,
+      icon: <FontAwesomeIcon icon={faEarthAsia} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#FF8F8F]" />,
       title: "Enjoy Your Trip",
       description: "Travel hassle-free with trusted services, well-planned itineraries, and community-based group travel options."
     },
     {
-      icon: <Gift className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#95A5FF]" />,
+      icon: <FontAwesomeIcon icon={faGift} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#95A5FF]" />,
       title: "Share & Earn Rewards",
       description: "Review your experience, share photos, and earn loyalty points & cashback for future trips!"
     }
@@ -108,7 +109,7 @@ export function Timeline() {
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <div className="p-2 sm:p-5 rounded-2xl bg-[#151515]  backdrop-blur-sm
+                      <div className="p-2 sm:p-5 rounded-2xl bg-[#000000]  backdrop-blur-sm
                                     shadow-lg shadow-[#37E5A5]/5 hover:shadow-[#37E5A5]/20 transition-all duration-300">
                         {step.icon}
                       </div>
@@ -138,7 +139,7 @@ export function Timeline() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="p-4 rounded-full bg-[#151515]  mb-4 backdrop-blur-sm
+                  <div className="p-4 rounded-full bg-[#000000]  mb-4 backdrop-blur-sm
                                 shadow-lg shadow-[#37E5A5]/5 hover:shadow-[#37E5A5]/10 transition-all duration-300">
                     {step.icon}
                   </div>

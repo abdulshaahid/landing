@@ -62,6 +62,18 @@ export default {
   			ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite'
   		},
   		keyframes: {
+			scale: {
+				'0%': { transform: 'scale(0)' },
+				'100%': { transform: 'scale(1)' }
+			  },
+			  bounce: {
+				'0%, 100%': { transform: 'translateY(0)' },
+				'50%': { transform: 'translateY(-25%)' }
+			  },
+			  fadeIn: {
+				'0%': { opacity: '0' },
+				'100%': { opacity: '1' }
+			  },
   			orbit: {
   				'0%': {
   					transform: 'rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))'
