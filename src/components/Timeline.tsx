@@ -1,8 +1,12 @@
-import { motion } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass , faCreditCard , faUsers , faEarthAsia , faGift } from '@fortawesome/free-solid-svg-icons'
+import { motion, useScroll, useTransform, useInView, useSpring } from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass, faCreditCard, faUsers, faEarthAsia, faGift } from '@fortawesome/free-solid-svg-icons';
+import { useRef } from 'react';
 
 export function Timeline() {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true, margin: "-10%" });
+
   const steps = [
     {
       icon: <FontAwesomeIcon icon={faMagnifyingGlass} className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-[#37E5A5]" />,
@@ -31,22 +35,49 @@ export function Timeline() {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1.2,
+        staggerChildren: 0.4,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.95
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.9,
+        ease: [0.43, 0.13, 0.23, 0.96] // Custom easing for smooth animation
+      }
+    }
+  };
+
   return (
-    <section className="section py-8 mb-8 sm:py-12 md:py-20 bg-black/50">
+    <section ref={containerRef} className="section py-8 mb-8 sm:py-12 md:py-20 bg-black/50 overflow-hidden">
       <motion.div
         className="container"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
       >
         <motion.div 
           className="text-center mb-8 sm:mb-12 md:mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          variants={itemVariants}
         >
-          <h2 className="text-3xl text-[##fdfff5] sm:text-4xl md:text-4xl font-bold mb-3 sm:mb-4">How Trawayl Works</h2>
-          <p className="text-sm sm:text-base text-[#ffffff]/60    max-w-2xl mx-auto px-4">
+          <h2 className="text-3xl text-[#fdfff5] sm:text-4xl md:text-4xl font-bold mb-3 sm:mb-4">How Trawayl Works</h2>
+          <p className="text-sm sm:text-base text-[#ffffff]/60 max-w-2xl mx-auto px-4">
             Your journey to extraordinary adventures in five simple steps
           </p>
         </motion.div>
@@ -86,22 +117,10 @@ export function Timeline() {
                 className={`relative flex md:flex-col ${
                   index % 2 === 0 ? 'md:pt-0 md:pb-32' : 'md:pt-32 md:pb-0'
                 }`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                variants={itemVariants}
               >
                 {/* Mobile Layout */}
-                <motion.div 
-                  className="flex md:hidden items-start gap-4 sm:gap-8"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ 
-                    duration: 0.5, 
-                    delay: index * 0.1,
-                    type: "spring",
-                    stiffness: 100
-                  }}
-                >
+                <div className="flex md:hidden items-start gap-4 sm:gap-8">
                   <div className="relative flex-shrink-0">
                     <motion.div 
                       className="relative"
@@ -109,29 +128,17 @@ export function Timeline() {
                       whileTap={{ scale: 0.95 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <div className="p-2 sm:p-5 rounded-2xl bg-[#000000]  backdrop-blur-sm
+                      <div className="p-2 sm:p-5 rounded-2xl bg-[#000000] backdrop-blur-sm
                                     shadow-lg shadow-[#37E5A5]/5 hover:shadow-[#37E5A5]/20 transition-all duration-300">
                         {step.icon}
                       </div>
-                      
                     </motion.div>
-                   
                   </div>
-                  <motion.div 
-                    className="flex-1 pt-2"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ 
-                      duration: 0.5, 
-                      delay: index * 0.1 + 0.1,
-                      type: "spring",
-                      stiffness: 100
-                    }}
-                  >
+                  <div className="flex-1 pt-2">
                     <h3 className="text-lg sm:text-xl text-[#fdfff5] font-bold mb-2">{step.title}</h3>
-                    <p className="text-sm sm:text-base text-[#ffffff]/60  leading-relaxed">{step.description}</p>
-                  </motion.div>
-                </motion.div>
+                    <p className="text-sm sm:text-base text-[#ffffff]/60 leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
 
                 {/* Desktop Layout */}
                 <motion.div
@@ -139,13 +146,13 @@ export function Timeline() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="p-4 rounded-full bg-[#000000]  mb-4 backdrop-blur-sm
+                  <div className="p-4 rounded-full bg-[#000000] mb-4 backdrop-blur-sm
                                 shadow-lg shadow-[#37E5A5]/5 hover:shadow-[#37E5A5]/10 transition-all duration-300">
                     {step.icon}
                   </div>
                   <div className="w-4 h-4 rounded-full bg-[#37E5A5] mb-4 shadow-lg shadow-[#37E5A5]/20" />
                   <h3 className="text-lg md:text-xl text-[#fdfff5] font-bold mb-2">{step.title}</h3>
-                  <p className="text-sm text-[#ffffff]/60   ">{step.description}</p>
+                  <p className="text-sm text-[#ffffff]/60">{step.description}</p>
                 </motion.div>
               </motion.div>
             ))}

@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion';
-import { fadeIn, stagger } from '../utils/animations';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMountainSun , faBus, faPeopleGroup, faTents, faPanorama, faPersonHiking } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+  faMountainSun, 
+  faBus, 
+  faPeopleGroup, 
+  faTents, 
+  faPanorama, 
+  faPersonHiking 
+} from '@fortawesome/free-solid-svg-icons';
 
 export function Features() {
   const features = [
@@ -37,47 +43,111 @@ export function Features() {
     }
   ];
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+      scale: 0.95
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section className="section py-8 mb-8 sm:py-12 md:py-20" id="features">
-
       <motion.div 
         className="container"
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        variants={stagger}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
       >
         <motion.div 
           className="text-center mb-8 sm:mb-12 md:mb-16 px-4"
-          variants={fadeIn}
+          variants={itemVariants}
         >
-          
-          <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-[#fdfff5] mb-3 sm:mb-4">Experience Travel Like Never Before</h2>
-          <p className="text-sm sm:text-base text-[#ffffff]/60   max-w-2xl mx-auto">
+          <motion.h2 
+            className="text-3xl sm:text-4xl md:text-4xl font-bold text-[#fdfff5] mb-3 sm:mb-4"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            Experience Travel Like Never Before
+          </motion.h2>
+          <motion.p 
+            className="text-sm sm:text-base text-[#ffffff]/60 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
             Discover a new way to explore the world with our innovative features designed
             for modern travelers.
-          </p>
+          </motion.p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 px-4">
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 px-4"
+          variants={containerVariants}
+        >
           {features.map((feature, index) => (
             <motion.div 
               key={index}
-              className="flex flex-col items-center text-center p-4 sm:p-6"
-              variants={fadeIn}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="flex flex-col items-center text-center p-4 sm:p-6 relative group"
+              variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <div className="mb-2 sm:mb-2 p-4 sm:p-4 rounded-full bg-[#000000] backdrop-blur-sm ">
+              <motion.div 
+                className="mb-2 sm:mb-2 p-4 sm:p-4 rounded-full bg-[#000000] backdrop-blur-sm relative z-10
+                         transform transition-transform duration-300 group-hover:scale-110"
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
                 {feature.icon}
-              </div>
-              <h3 className="text-xl sm:text-lg md:text-xl text-[#fdfff5] font-semibold mb-2 sm:mb-3">{feature.title}</h3>
-              <p className="text-m sm:text-base text-[#ffffff]/60  ">{feature.description}</p>
+              </motion.div>
+              <motion.h3 
+                className="text-xl sm:text-lg md:text-xl text-[#fdfff5] font-semibold mb-2 sm:mb-3"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: index * 0.1 + 0.2 }}
+              >
+                {feature.title}
+              </motion.h3>
+              <motion.p 
+                className="text-m sm:text-base text-[#ffffff]/60"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
+              >
+                {feature.description}
+              </motion.p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </motion.div>
-
     </section>
   );
 }
