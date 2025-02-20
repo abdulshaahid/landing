@@ -16,7 +16,7 @@ export function Toast({ show, message }: ToastProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="bg-[#2DBE86] text-black px-3 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg text-xs sm:text-sm font-medium w-[95%] sm:w-auto sm:min-w-[280px] sm:max-w-md text-center z-[9999] truncate"
+            className="bg-[#37E5A5]/90 text-black px-3 sm:px-6 py-2 sm:py-3 rounded-full shadow-lg text-xs sm:text-sm font-medium w-[95%] sm:w-auto sm:min-w-[280px] sm:max-w-md text-center z-[9999] truncate"
           >
             {message}
           </motion.div>
